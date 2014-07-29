@@ -1,0 +1,17 @@
+{
+  "name": "mangosteen-datetime",
+  "version": "0.0.1",
+  "description": "datetime service",
+  "main": "server.js",
+  "dependencies": {
+    "express": "~4.7.2",
+    "datejs": "~1.0.0-rc1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
