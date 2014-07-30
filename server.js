@@ -7,7 +7,7 @@ app.get('/', function(req, res) {
     var querystring = req.query.date
     try
     {
-        res.send(Date.parse(querystring).setTimezone("PST").toString('yyyy-MM-ddThh:mm:ss-07:00'));
+        res.send(Date.parse(querystring).toString('yyyy-MM-ddTHH:mm:ss-07:00'));
     }
     catch(e) 
     {
