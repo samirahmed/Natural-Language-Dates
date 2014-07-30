@@ -11,7 +11,7 @@ app.get('/', function(req, res) {
     }
     catch(e) 
     {
-        res.send(e.toString(), 400);
+        res.send(null, 400);
     }
  });
     
