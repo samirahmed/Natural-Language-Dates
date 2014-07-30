@@ -4,8 +4,15 @@ var port = process.env.PORT || 1337;
 var app = express();
 
 app.get('/', function(req, res) {
-  var querystring = req.query.date
-  res.send( Date.parse(querystring).toString('d-MMM-yyyy'));
+    var querystring = req.query.date
+    try
+    {
+        res.send(Date.parse(querystring).setTimezone("PST").toString('%Y-%m-%dT%H:%M:%S-07:00'));
+    }
+    catch(e) 
+    {
+        res.send(null, 400);
+    }
  });
     
 app.listen(port);
